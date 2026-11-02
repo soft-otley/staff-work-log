@@ -1,0 +1,594 @@
+{
+  "settings": {
+    "companyName": "Apex Enterprise Solutions",
+    "standardWorkHoursPerDay": 8,
+    "appsScriptUrl": "",
+    "appsScriptSecret": "sec_7f9c381a8b3e4d819e62319f07d2",
+    "syncStatus": "Not Configured",
+    "allowSelfRegistration": false,
+    "requireLogApproval": true
+  },
+  "departments": [
+    {
+      "id": "dept-eng",
+      "name": "Engineering & Technology",
+      "code": "ENG",
+      "description": "Core software development, architecture, DevOps, and cloud systems",
+      "managerId": "usr-david",
+      "managerName": "David Chen",
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "dept-ops",
+      "name": "Operations & Logistics",
+      "code": "OPS",
+      "description": "Business process, workflow delivery, and organizational support",
+      "managerId": "usr-sarah",
+      "managerName": "Sarah Jenkins",
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "dept-qa",
+      "name": "Quality Assurance",
+      "code": "QA",
+      "description": "Software testing, validation, test automation, and compliance",
+      "managerId": "usr-david",
+      "managerName": "David Chen",
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "dept-mkt",
+      "name": "Marketing & Growth",
+      "code": "MKT",
+      "description": "Brand presence, client acquisition, and communications",
+      "managerId": "usr-sarah",
+      "managerName": "Sarah Jenkins",
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    }
+  ],
+  "roles": [
+    {
+      "id": "role-admin",
+      "name": "Administrator",
+      "description": "Full system administrative access, user management, and security audit control",
+      "isSystem": true,
+      "permissions": [
+        "all"
+      ],
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "role-manager",
+      "name": "Manager",
+      "description": "Departmental oversight, task assignment, and work log review authority",
+      "isSystem": true,
+      "permissions": [
+        "tasks.create",
+        "tasks.assign",
+        "tasks.view.dept",
+        "logs.review",
+        "reports.view.dept",
+        "calendar.manage"
+      ],
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "role-staff",
+      "name": "Staff",
+      "description": "Individual contributor access for assigned tasks, daily work logs, and personal calendar",
+      "isSystem": true,
+      "permissions": [
+        "tasks.view.assigned",
+        "tasks.update.progress",
+        "logs.create",
+        "logs.submit",
+        "calendar.view"
+      ],
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    }
+  ],
+  "permissions": [
+    {
+      "id": "users.manage",
+      "name": "Manage Users",
+      "category": "users",
+      "description": "Create, edit, reset passwords and deactivate users"
+    },
+    {
+      "id": "roles.manage",
+      "name": "Manage Roles",
+      "category": "settings",
+      "description": "Configure custom roles and permissions"
+    },
+    {
+      "id": "departments.manage",
+      "name": "Manage Departments",
+      "category": "departments",
+      "description": "Create and configure company departments"
+    },
+    {
+      "id": "tasks.create",
+      "name": "Create Tasks",
+      "category": "tasks",
+      "description": "Create and define task details"
+    },
+    {
+      "id": "tasks.assign",
+      "name": "Assign Tasks",
+      "category": "tasks",
+      "description": "Assign tasks to team members"
+    },
+    {
+      "id": "tasks.view.all",
+      "name": "View All Tasks",
+      "category": "tasks",
+      "description": "View tasks across all departments"
+    },
+    {
+      "id": "logs.review",
+      "name": "Review Daily Logs",
+      "category": "logs",
+      "description": "Approve, reject, or comment on submitted logs"
+    },
+    {
+      "id": "reports.view.all",
+      "name": "View All Reports",
+      "category": "reports",
+      "description": "Generate organizational-wide reports"
+    }
+  ],
+  "rolePermissions": [],
+  "users": [
+    {
+      "id": "usr-admin",
+      "username": "admin",
+      "passwordHash": "e2fc6f70f74eddcc297bddb3d0c7e4a7c52432b4e287860d48dfd3489490d986",
+      "passwordSalt": "68ff35e9a3ac159c247ae5df30f89cce",
+      "fullName": "Alexander Wright",
+      "departmentId": "dept-ops",
+      "departmentName": "Operations & Logistics",
+      "jobTitle": "Chief Operations Officer & SysAdmin",
+      "role": "Administrator",
+      "roleId": "role-admin",
+      "email": "alexander.wright@company.internal",
+      "phone": "+1 (555) 019-2831",
+      "joiningDate": "2023-01-15",
+      "accountStatus": "Active",
+      "lastLogin": "2026-11-02T10:14:29.976Z",
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:29.976Z"
+    },
+    {
+      "id": "usr-david",
+      "username": "david.eng",
+      "passwordHash": "78d0cda541c53212931cf9dff9ced230b12c732787527d86a4417d98e49fe3e1",
+      "passwordSalt": "4f21262040270d5ea62f05302bf59713",
+      "fullName": "David Chen",
+      "departmentId": "dept-eng",
+      "departmentName": "Engineering & Technology",
+      "jobTitle": "Head of Engineering",
+      "role": "Manager",
+      "roleId": "role-manager",
+      "email": "david.chen@company.internal",
+      "phone": "+1 (555) 019-2832",
+      "joiningDate": "2023-03-01",
+      "accountStatus": "Active",
+      "lastLogin": "2026-11-02T10:14:17.909Z",
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "usr-sarah",
+      "username": "sarah.ops",
+      "passwordHash": "78d0cda541c53212931cf9dff9ced230b12c732787527d86a4417d98e49fe3e1",
+      "passwordSalt": "4f21262040270d5ea62f05302bf59713",
+      "fullName": "Sarah Jenkins",
+      "departmentId": "dept-ops",
+      "departmentName": "Operations & Logistics",
+      "jobTitle": "Operations Manager",
+      "role": "Manager",
+      "roleId": "role-manager",
+      "email": "sarah.jenkins@company.internal",
+      "phone": "+1 (555) 019-2833",
+      "joiningDate": "2023-04-10",
+      "accountStatus": "Active",
+      "lastLogin": "2026-11-02T10:14:17.909Z",
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "usr-elena",
+      "username": "elena.dev",
+      "passwordHash": "bb5e2acc78185e4a973175a6269f8e8f6b5cce6d636214b9e51b238b5f6a47bc",
+      "passwordSalt": "8a0c196b4342bdc02acb24a2371fe105",
+      "fullName": "Elena Rostova",
+      "departmentId": "dept-eng",
+      "departmentName": "Engineering & Technology",
+      "jobTitle": "Senior Full Stack Engineer",
+      "role": "Staff",
+      "roleId": "role-staff",
+      "email": "elena.rostova@company.internal",
+      "phone": "+1 (555) 019-2834",
+      "joiningDate": "2023-07-20",
+      "accountStatus": "Active",
+      "lastLogin": "2026-11-02T10:28:43.002Z",
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:28:43.003Z"
+    },
+    {
+      "id": "usr-marcus",
+      "username": "marcus.qa",
+      "passwordHash": "bb5e2acc78185e4a973175a6269f8e8f6b5cce6d636214b9e51b238b5f6a47bc",
+      "passwordSalt": "8a0c196b4342bdc02acb24a2371fe105",
+      "fullName": "Marcus Vance",
+      "departmentId": "dept-qa",
+      "departmentName": "Quality Assurance",
+      "jobTitle": "Lead QA Automation Engineer",
+      "role": "Staff",
+      "roleId": "role-staff",
+      "email": "marcus.vance@company.internal",
+      "phone": "+1 (555) 019-2835",
+      "joiningDate": "2023-09-12",
+      "accountStatus": "Active",
+      "lastLogin": "2026-11-02T10:14:17.909Z",
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "usr-chloe",
+      "username": "chloe.mkt",
+      "passwordHash": "bb5e2acc78185e4a973175a6269f8e8f6b5cce6d636214b9e51b238b5f6a47bc",
+      "passwordSalt": "8a0c196b4342bdc02acb24a2371fe105",
+      "fullName": "Chloe Bennett",
+      "departmentId": "dept-mkt",
+      "departmentName": "Marketing & Growth",
+      "jobTitle": "Digital Content Specialist",
+      "role": "Staff",
+      "roleId": "role-staff",
+      "email": "chloe.bennett@company.internal",
+      "phone": "+1 (555) 019-2836",
+      "joiningDate": "2024-02-01",
+      "accountStatus": "Active",
+      "lastLogin": "2026-11-02T10:14:17.909Z",
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "TSK-1001",
+      "title": "Implement Multi-User Google Sheets Sync Gateway",
+      "description": "Design and deploy HMAC-SHA256 authenticated Google Apps Script bridge with LockService concurrency controls.",
+      "assignedTo": "usr-elena",
+      "assigneeName": "Elena Rostova",
+      "departmentId": "dept-eng",
+      "departmentName": "Engineering & Technology",
+      "createdBy": "usr-david",
+      "creatorName": "David Chen",
+      "startDate": "2026-11-02",
+      "dueDate": "2026-11-06",
+      "priority": "Urgent",
+      "status": "In Progress",
+      "progress": 75,
+      "estimatedHours": 24,
+      "actualHours": 18,
+      "comments": [
+        {
+          "id": "c-1",
+          "taskId": "TSK-1001",
+          "userId": "usr-david",
+          "userName": "David Chen",
+          "userRole": "Manager",
+          "comment": "Please verify constant-time signature comparison to protect against timing attacks.",
+          "createdAt": "2026-11-02T10:14:17.909Z"
+        }
+      ],
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "TSK-1002",
+      "title": "Automated Regression Suite for Daily Log Approvals",
+      "description": "Configure end-to-end Cypress test cases validating status transitions: Draft -> Submitted -> Approved/Rejected.",
+      "assignedTo": "usr-marcus",
+      "assigneeName": "Marcus Vance",
+      "departmentId": "dept-qa",
+      "departmentName": "Quality Assurance",
+      "createdBy": "usr-david",
+      "creatorName": "David Chen",
+      "startDate": "2026-11-02",
+      "dueDate": "2026-11-08",
+      "priority": "High",
+      "status": "In Progress",
+      "progress": 40,
+      "estimatedHours": 16,
+      "actualHours": 6,
+      "comments": [],
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "TSK-1003",
+      "title": "Staff Onboarding Protocol Documentation Update",
+      "description": "Update the company standard operating procedures (SOP) for new employee account provisioning and role assignments.",
+      "assignedTo": "usr-sarah",
+      "assigneeName": "Sarah Jenkins",
+      "departmentId": "dept-ops",
+      "departmentName": "Operations & Logistics",
+      "createdBy": "usr-admin",
+      "creatorName": "Alexander Wright",
+      "startDate": "2026-10-30",
+      "dueDate": "2026-11-04",
+      "priority": "Medium",
+      "status": "In Progress",
+      "progress": 60,
+      "estimatedHours": 12,
+      "actualHours": 8,
+      "comments": [],
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "TSK-1004",
+      "title": "Quarterly Staff Performance Analytics Report Deck",
+      "description": "Compile monthly work hours, task throughput, and department delivery metrics for executive leadership review.",
+      "assignedTo": "usr-chloe",
+      "assigneeName": "Chloe Bennett",
+      "departmentId": "dept-mkt",
+      "departmentName": "Marketing & Growth",
+      "createdBy": "usr-sarah",
+      "creatorName": "Sarah Jenkins",
+      "startDate": "2026-10-28",
+      "dueDate": "2026-11-01",
+      "priority": "High",
+      "status": "In Progress",
+      "progress": 85,
+      "estimatedHours": 20,
+      "actualHours": 19,
+      "comments": [],
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "TSK-1005",
+      "title": "Deploy Cloudflare Pages Functions Production Build",
+      "description": "Setup continuous deployment from GitHub repo to Cloudflare Pages edge runtime with environment secrets.",
+      "assignedTo": "usr-elena",
+      "assigneeName": "Elena Rostova",
+      "departmentId": "dept-eng",
+      "departmentName": "Engineering & Technology",
+      "createdBy": "usr-admin",
+      "creatorName": "Alexander Wright",
+      "startDate": "2026-10-26",
+      "dueDate": "2026-10-31",
+      "completionDate": "2026-10-31",
+      "priority": "Urgent",
+      "status": "Completed",
+      "progress": 100,
+      "estimatedHours": 14,
+      "actualHours": 12,
+      "comments": [],
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    }
+  ],
+  "dailyLogs": [
+    {
+      "id": "LOG-2026-001",
+      "employeeId": "usr-elena",
+      "employeeName": "Elena Rostova",
+      "departmentId": "dept-eng",
+      "departmentName": "Engineering & Technology",
+      "workDate": "2026-11-02",
+      "startTime": "08:30",
+      "endTime": "17:00",
+      "totalHours": 8.5,
+      "workDescription": "Architected the Web Crypto PBKDF2 authentication pipeline and verified constant-time signature checks. Implemented Google Sheets schema synchronization batch writers.",
+      "tasksCompleted": "TSK-1005 Cloudflare Pages CI/CD configuration; unit tests for password hashing.",
+      "pendingTasks": "Complete integration tests for Google Apps Script LockService concurrent calls.",
+      "problemsEncountered": "Apps Script has a 6-minute execution limit; batching records into chunks of 100 prevents timeout.",
+      "nextDayPlan": "Perform stress tests with 30 simulated concurrent staff submissions.",
+      "additionalNotes": "All cryptographic keys properly sourced from Cloudflare encrypted secrets.",
+      "submissionStatus": "Submitted",
+      "managerComments": "",
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "LOG-2026-002",
+      "employeeId": "usr-marcus",
+      "employeeName": "Marcus Vance",
+      "departmentId": "dept-qa",
+      "departmentName": "Quality Assurance",
+      "workDate": "2026-11-01",
+      "startTime": "09:00",
+      "endTime": "17:30",
+      "totalHours": 8.5,
+      "workDescription": "Executed test matrices covering Administrator user provisioning, password resets, role permission boundaries, and formula injection sanitization.",
+      "tasksCompleted": "Cypress suite for RBAC restrictions on staff endpoints.",
+      "pendingTasks": "Review audit log export formatting.",
+      "problemsEncountered": "None encountered. Test suite passing 100%.",
+      "nextDayPlan": "Test mobile responsive navigation on iOS Safari and Android Chrome.",
+      "additionalNotes": "Ready for manager review.",
+      "submissionStatus": "Approved",
+      "managerComments": "Excellent attention to formula sanitization detail. Approved!",
+      "reviewerId": "usr-david",
+      "reviewerName": "David Chen",
+      "reviewedAt": "2026-11-02T10:14:17.909Z",
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "LOG-2026-003",
+      "employeeId": "usr-chloe",
+      "employeeName": "Chloe Bennett",
+      "departmentId": "dept-mkt",
+      "departmentName": "Marketing & Growth",
+      "workDate": "2026-11-02",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "totalHours": 7,
+      "workDescription": "Drafted quarterly performance newsletter and visual infographics for department KPIs.",
+      "tasksCompleted": "Content outline and visual asset generation.",
+      "pendingTasks": "Executive quotes and review by Sarah Jenkins.",
+      "problemsEncountered": "Awaiting revised revenue metrics from finance.",
+      "nextDayPlan": "Finalize graphics and schedule distribution.",
+      "additionalNotes": "Draft version saved.",
+      "submissionStatus": "Draft",
+      "managerComments": "",
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    }
+  ],
+  "logReviews": [],
+  "logAudits": [
+    {
+      "id": "aud-log-1",
+      "logId": "LOG-2026-002",
+      "modifiedBy": "usr-david",
+      "modifierName": "David Chen",
+      "action": "Approved",
+      "changes": {
+        "submissionStatus": {
+          "old": "Submitted",
+          "new": "Approved"
+        }
+      },
+      "timestamp": "2026-11-02T10:14:17.909Z",
+      "notes": "Reviewed and approved with manager comments."
+    }
+  ],
+  "calendarEvents": [
+    {
+      "id": "evt-1",
+      "title": "Sprint Planning & Team Backlog Review",
+      "description": "Bi-weekly engineering and operations sprint task allocation.",
+      "eventType": "Meeting",
+      "startDate": "2026-11-02",
+      "endDate": "2026-11-02",
+      "allDay": false,
+      "departmentId": "dept-eng",
+      "createdById": "usr-david",
+      "creatorName": "David Chen",
+      "attendees": [
+        "usr-elena",
+        "usr-marcus",
+        "usr-david"
+      ],
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "evt-2",
+      "title": "Quarterly Audit & Work Log Certification Deadline",
+      "description": "All pending daily logs must be submitted and approved by supervisors.",
+      "eventType": "TaskDeadline",
+      "startDate": "2026-11-05",
+      "endDate": "2026-11-05",
+      "allDay": true,
+      "createdById": "usr-admin",
+      "creatorName": "Alexander Wright",
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "evt-3",
+      "title": "All-Hands Company Milestone Meeting",
+      "description": "Company-wide strategy presentation and employee recognition.",
+      "eventType": "CompanyEvent",
+      "startDate": "2026-11-07",
+      "allDay": true,
+      "createdById": "usr-admin",
+      "creatorName": "Alexander Wright",
+      "createdAt": "2026-11-02T10:14:17.909Z",
+      "updatedAt": "2026-11-02T10:14:17.909Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-1",
+      "userId": "usr-elena",
+      "title": "New Urgent Task Assigned",
+      "message": "David Chen assigned you: Implement Multi-User Google Sheets Sync Gateway.",
+      "type": "task_assigned",
+      "link": "/tasks",
+      "isRead": false,
+      "createdAt": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "notif-2",
+      "userId": "usr-david",
+      "title": "Daily Log Submitted for Review",
+      "message": "Elena Rostova submitted daily work log for review.",
+      "type": "log_reviewed",
+      "link": "/daily-logs",
+      "isRead": false,
+      "createdAt": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "notif-3",
+      "userId": "usr-marcus",
+      "title": "Daily Log Approved",
+      "message": "David Chen approved your daily work log for yesterday.",
+      "type": "log_reviewed",
+      "link": "/daily-logs",
+      "isRead": true,
+      "createdAt": "2026-11-02T10:14:17.909Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "aud-mvz494l71xi7",
+      "userId": "usr-elena",
+      "userName": "Elena Rostova",
+      "action": "USER_LOGIN",
+      "module": "Authentication",
+      "details": "Successful login for user: elena.dev",
+      "timestamp": "2026-11-02T10:28:43.003Z"
+    },
+    {
+      "id": "aud-mvz3que1h54m",
+      "userId": "usr-admin",
+      "userName": "Alexander Wright",
+      "action": "USER_LOGIN",
+      "module": "Authentication",
+      "details": "Successful login for user: admin",
+      "timestamp": "2026-11-02T10:14:29.977Z"
+    },
+    {
+      "id": "aud-sys-1",
+      "userId": "usr-admin",
+      "userName": "Alexander Wright",
+      "action": "SYSTEM_BOOTSTRAP",
+      "module": "Security",
+      "details": "Initial system bootstrap completed. Enterprise database tables initialized.",
+      "timestamp": "2026-11-02T10:14:17.909Z"
+    },
+    {
+      "id": "aud-sys-2",
+      "userId": "usr-admin",
+      "userName": "Alexander Wright",
+      "action": "USER_LOGIN",
+      "module": "Authentication",
+      "details": "Administrator logged in from internal session.",
+      "timestamp": "2026-11-02T10:14:17.909Z"
+    }
+  ],
+  "sessions": {
+    "sess_2u1rfj416wfmvz3que0": {
+      "userId": "usr-admin",
+      "expiresAt": 1794219269976
+    },
+    "sess_ixxhqic978kmvz494l6": {
+      "userId": "usr-elena",
+      "expiresAt": 1794220123002
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Staff Work Log & Team Management System",
+  "description": "Enterprise-grade staff work log, task management, and team operations platform for organizations with 20-50 employees.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
